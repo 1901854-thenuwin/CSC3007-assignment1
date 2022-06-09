@@ -1,6 +1,3 @@
-// Check JS is linked with HTML
-// alert('Connection Successful')
-
 fetch ("https://api.data.gov.sg/v1/environment/psi").then ((psi_readings) => {
 
     // Check link has been connected
@@ -11,16 +8,10 @@ fetch ("https://api.data.gov.sg/v1/environment/psi").then ((psi_readings) => {
 
 }).then(function(psi_reading_object) {
 
-    // Check all data has been coverted to Object
     // console.log (psi_reading_object);
-
-    // Read readings[items]
-    // console.log (psi_reading_object["items"][0].readings);
-
-    // Ensure that able to read Timestampß
+    // console.log (psi_reading_object["items"][0].readings);\
     // console.log (psi_object["items"][0].update_timestamp);
 
-    // Declarations //
     var metric = Object.keys(psi_reading_object.items[0].readings);
     var rows = metric.length;
     var metric_data = psi_reading_object.items[0].readings;
